@@ -1,10 +1,11 @@
 const {Schema, model, ObjectId} = require('mongoose')
+const {bikeSchema} = require('./bikeModel')
 
 const orderSchema = new Schema({
-    bikeId: {type: ObjectId, ref: 'bicycles'},
+    bikeInfo: bikeSchema,
     status: Number,
-    started: Date,
-    finished: Date,
+    startTime: Date,
+    finishTime: Date,
     customerName: String,
     customerPhone: String,
     startRentalPoint: String,

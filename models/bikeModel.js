@@ -6,4 +6,7 @@ const bikeSchema = new Schema({
     rentCost: Number
 }, {collection: 'bicycles'})
 
-module.exports = model('bikeModel', bikeSchema)
+module.exports = {
+    bicyclesDb: model('bikeModel', bikeSchema),
+    bikeSchema
+}

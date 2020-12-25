@@ -1,5 +1,6 @@
 @import url('./card.css');
 @import url('./bicycle.css');
+@import url('./order.css');
 
 body {
     margin: 0;
@@ -52,8 +53,8 @@ body {
 }
 
 .indexContainer {
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
     position: relative;
     display: flex;
     align-items: center;

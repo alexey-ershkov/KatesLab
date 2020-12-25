@@ -37,17 +37,18 @@
 }
 
 .bikeDescContainer {
-    height: 34vh;
+    height: 25vh;
     width: calc(100% - 20px);
     margin: 0;
     padding: 10px;
     display: flex;
     align-items: stretch;
     justify-content: center;
+}
 
-    border-radius: 0 0 20px 20px;
+.desc {
     background-color: rgba(255,255,255,0.15);
-
+    border-radius: 0 0 20px 20px;
     box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
 }
 
@@ -80,6 +81,10 @@
     margin: 10px 0;
 }
 
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 .input {
     height: 8vh;
     border-radius: 20px;
@@ -97,9 +102,11 @@
 
 .button {
     background-color: rgba(255,255,255,0.15);
-
+    outline: none;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
 
+    display: inline-block;
+    vertical-align: middle;
     color: #E3F2FD;
     border: none;
 
@@ -111,6 +118,9 @@
     font-size: 40px;
     font-weight: 400;
     border-radius: 20px;
+
+    text-decoration: none;
+    text-align: center;
 }
 
 .button:hover {
@@ -119,3 +129,59 @@
     cursor: pointer;
 }
 
+.rentCost {
+
+    color: #E3F2FD;
+    font-size: 30px;
+    font-weight: 400;
+    height: 5vh;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.activationBlock {
+    position: relative;
+    width: 50%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infoPar {
+    font-size: 28px;
+    color: #E3F2FD;
+    margin: 20px;
+}
+
+.link {
+    background-color: rgba(255,255,255,0.15);
+    outline: none;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+
+    display: inline-block;
+    vertical-align: middle;
+    color: #E3F2FD;
+    border: none;
+
+    height: 6vh;
+
+    margin: 20px;
+    padding: 16px 32px;
+
+    font-size: 40px;
+    font-weight: 400;
+    border-radius: 20px;
+
+    text-decoration: none;
+    text-align: center;
+}
+
+.link:hover {
+    transition: box-shadow 400ms ease-out;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}

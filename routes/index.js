@@ -1,5 +1,5 @@
 const {Router} = require("express")
-const bicyclesDb = require('../models/bikeModel')
+const {bicyclesDb} = require('../models/bikeModel')
 
 let router = Router()
 
