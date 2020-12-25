@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
 
 const mainRoutes = require('./routes/index')
+const bicycleRoutes = require('./routes/bicycle')
 
 let PORT = 3000;
 let dbUrl = 'mongodb+srv://app:mongo_app@cluster0.klrdh.mongodb.net/bicycleRent'
@@ -19,13 +20,14 @@ app.set('view engine', 'hbs');
 app.set('views', 'templates');
 
 app.use(mainRoutes)
+app.use(bicycleRoutes)
 app.use(express.static(__dirname + '/public'));
 
 
-mongoose.connect(dbUrl,{
+mongoose.connect(dbUrl, {
     useUnifiedTopology: true,
     useNewUrlParser: true
-}).then(() => app.listen(PORT, async() => {
+}).then(() => app.listen(PORT, async () => {
     console.log(`Server started on port ${PORT}`)
 }))
     .catch(err => console.log(err))

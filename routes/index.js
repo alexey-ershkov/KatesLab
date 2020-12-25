@@ -1,14 +1,15 @@
 const {Router} = require("express")
-let bodyParser = require("body-parser");
+const bicyclesDb = require('../models/bikeModel')
 
 let router = Router()
 
-router.use(bodyParser.json());
-router.use(bodyParser.urlencoded({ extended: true }));
-
 router.get('/', async (req, resp) => {
+    const bicycles = await bicyclesDb.find({}).lean()
+
     resp.render('index', {
-        title: "Велосипеды"
+        title: 'Велосипеды',
+        actionName: 'Выберите велосипед',
+        bicycles
     })
 })
 

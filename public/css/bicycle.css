@@ -1,0 +1,121 @@
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.bikeImgContainer {
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bikeContainer {
+    position: relative;
+    width: 85%;
+    height: 80%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.bikeImg {
+    position: relative;
+    padding: 2vw;
+    width: 24vw;
+
+    border-radius: 20px;
+}
+
+.bikeDescContainer {
+    height: 34vh;
+    width: calc(100% - 20px);
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(255,255,255,0.15);
+
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+}
+
+.bikeDesc {
+    margin: 0;
+    padding: 10px;
+    overflow-y: scroll;
+
+    color: #E3F2FD;
+
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.formBlock {
+    position: relative;
+    width: 50%;
+    height: 80%;
+
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 2vw;
+}
+
+.label {
+    color: #E3F2FD;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.input {
+    height: 8vh;
+    border-radius: 20px;
+    /*border: 3px solid #E3F2FD;*/
+    border: none;
+    background-color: rgba(255,255,255,0.15);
+
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+
+    color: #E3F2FD;
+    outline: none;
+    padding: 10px;
+}
+
+
+.button {
+    background-color: rgba(255,255,255,0.15);
+
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+
+    color: #E3F2FD;
+    border: none;
+
+    height: 10vh;
+
+    margin: 20px;
+    padding: 16px 32px;
+
+    font-size: 40px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+.button:hover {
+    transition: box-shadow 400ms ease-out;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+

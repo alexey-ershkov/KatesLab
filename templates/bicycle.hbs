@@ -1,0 +1,26 @@
+<div class="bikeContainer">
+    <div class="infoBlock">
+        <div class="bikeImgContainer">
+            <img class="bikeImg" src="/images/{{bicycle.name}}.jpg" alt="{{bicycle.name}}">
+        </div>
+        <div class="bikeDescContainer">
+            <p class="bikeDesc">{{bicycle.description}}</p>
+        </div>
+    </div>
+    <form class="formBlock" action="/order" method="post">
+            <label class="label" for="date">Время</label>
+            <input class="input" type="datetime-local" name="date" id="date">
+            <label class="label" for="name">Имя</label>
+            <input class="input" type="text" name="name" id="name">
+            <label class="label" for="phone">Телефон</label>
+            <input class="input" type="tel" name="phone" id="phone">
+            <label class="label" for="rental">Пункт проката</label>
+            <select class="input" name="rental" id="rental">
+                {{#each rentals}}
+                    <option value="{{address}}">{{address}} - Время работы: {{open}}</option>
+                {{/each}}
+            </select>
+            <input type="hidden" name="id" id="id" value={{bicycle._id}}>
+            <button class="button" type="submit">Оформить</button>
+    </form>
+</div>
