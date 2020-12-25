@@ -1,0 +1,35 @@
+<div class="bikeContainer">
+    <div class="infoBlock">
+        <div class="bikeImgContainer">
+            <img class="bikeImg" src="/images/{{bicycle.name}}.jpg" alt="{{bicycle.name}}">
+        </div>
+        <div class="desc">
+            <p class="rentCost">Стоимость аренды: {{bicycle.rentCost}} ₽/час</p>
+            <div class="bikeDescContainer">
+                <p class="bikeDesc">{{bicycle.description}}</p>
+            </div>
+        </div>
+    </div>
+    {{#if order}}
+        <div class="activationBlock">
+            <p class="infoPar">Дата: {{date}} <br> Время: {{time}} <br> Пункт выдачи: {{order.startRentalPoint}}</p>
+            <a href="/order/{{order._id}}" class="link">Ссылка на активацию</a>
+        </div>
+    {{else}}
+    <form class="formBlock" action="/bicycle/{{bicycle._id}}" method="post">
+        <label class="label" for="name">Имя</label>
+        <input required class="input" type="text" name="name" id="name">
+        <label class="label" for="phone">Телефон</label>
+        <input required class="input" type="tel" name="phone" id="phone">
+        <label class="label" for="date">Время</label>
+        <input required class="input" type="datetime-local" name="date" id="date">
+        <label class="label" for="rental">Пункт проката</label>
+        <select required class="input" name="rental" id="rental">
+            {{#each rentals}}
+                <option value="{{address}}">{{address}} - Время работы: {{open}}</option>
+            {{/each}}
+        </select>
+        <button class="button" type="submit">Оформить</button>
+    </form>
+    {{/if}}
+</div>

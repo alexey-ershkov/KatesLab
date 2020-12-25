@@ -1,0 +1,31 @@
+{{#if startedOrder}}
+    <p class="time"> Время проката: <span id="timeField" startTime="{{order.startTime}}"></span></p>
+    <script src="/scripts/timer.js"></script>
+{{/if}}
+<div class="orderContainer">
+    <div class="orderImgContainer">
+        <img class="orderImg" src="/images/{{order.bikeInfo.name}}.jpg" alt="">
+    </div>
+    <p class="orderCost"> Стоимость проката: {{order.bikeInfo.rentCost}} ₽/час</p>
+    <p class="orderCost"> Начало проката: {{startDate}} в {{startTime}}<br> в пункте {{order.startRentalPoint}}</p>
+    {{#if preOrder}}
+        <form action="/order/{{order._id}}" method="post">
+            <button class="button" type="submit">Начать прокат</button>
+        </form>
+    {{/if}}
+    {{#if startedOrder}}
+        <form class="formOrder" action="/order/{{order._id}}" method="post">
+            <label class="label" for="rental">Пункт завершения проката</label>
+            <select required class="input" name="rental" id="rental">
+                {{#each rentals}}
+                    <option value="{{address}}">{{address}} - Время работы: {{open}}</option>
+                {{/each}}
+            </select>
+            <button class="button" type="submit">Закончить прокат</button>
+        </form>
+    {{/if}}
+    {{#if finishedOrder}}
+        <p class="orderCost"> Конец проката: {{finishDate}} в {{finishTime}} <br> в пункте {{order.endRentalPoint}}</p>
+        <p class="orderCost"> Стоимость проката: {{cost}} ₽</p>
+    {{/if}}
+</div>

@@ -1,0 +1,59 @@
+.orderContainer {
+    position: relative;
+    width: 93%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.orderImg {
+    position: relative;
+    padding: 2vw;
+    width: 50vmin;
+
+    border-radius: 20px;
+}
+
+.orderImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 20px;
+}
+
+.orderCost {
+    color: #E3F2FD;
+
+    margin: 1.5vmin 0;
+
+    font-size: 34px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.formOrder {
+    height: 20vh;
+    margin: 3vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20vmin;
+
+    color: #E3F2FD;
+
+    margin: 1.5vmin 4vmin;
+
+    font-size: 30px;
+    font-weight: 300;
+}

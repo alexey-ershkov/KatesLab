@@ -1,0 +1,50 @@
+.cardContainer {
+    height: 32vmin;
+    width: 32vmin;
+    text-decoration: none;
+    color: #E3F2FD;
+    margin: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+}
+
+.cardImgContainer {
+    z-index: 1;
+    position: relative;
+    height: 75%;
+    width: 100%;
+
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+
+}
+
+.cardContainer:hover {
+   transition: box-shadow 400ms ease-out;
+   box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+}
+
+.cardImg {
+    position: relative;
+    width: 90%;
+}
+
+.cardName {
+    position: relative;
+    height: 25%;
+
+    text-align: center;
+    margin: 0;
+
+    font-weight: 400;
+
+    padding: 5%;
+    font-size: 28px;
+}
